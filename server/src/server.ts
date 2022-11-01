@@ -4,14 +4,13 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient({
   log: ["query"],
 });
-//teste
 async function bootstrap() {
   const fastify = Fastify({
     logger: true,
   });
 
   fastify.get("/pools/count", async () => {
-     const count = await prisma.pool.count();
+    const count = await prisma.pool.count();
     return { count };
   });
 
