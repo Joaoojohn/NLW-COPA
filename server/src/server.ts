@@ -4,7 +4,7 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient({
   log: ["query"],
 });
-
+//teste
 async function bootstrap() {
   const fastify = Fastify({
     logger: true,
